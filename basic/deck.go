@@ -4,6 +4,10 @@ import "fmt"
 
 type deck []string
 
+func deal(cards deck, handSize int) (deck, deck) {
+	return cards[:handSize], cards[handSize:]
+}
+
 func newDeck() deck {
 	cards := deck{}
 	cardSuits := []string{"Diamonds", "Hearts", "Spades", "Clubs"}
