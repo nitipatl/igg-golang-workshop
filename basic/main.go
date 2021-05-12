@@ -1,9 +1,13 @@
 package main
 
+import (
+	"./deck"
+)
+
 func main() {
-	cards := newDeck()
-	hand, remainingCards := deal(cards, 5)
-	hand.print()
-	remainingCards.print()
-	cards.print()
+	cards := deck.NewDeck()
+	hand, remainingCards := deck.Deal(cards, 5)
+	hand.Print()
+	remainingCards.Print()
+	cards.Print()
 }
