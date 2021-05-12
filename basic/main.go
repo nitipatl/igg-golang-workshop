@@ -1,7 +1,10 @@
 package main
 
 import (
-	"./deck"
+	"fmt"
+
+	deck "github.com/nitipatl/go-deck"
+	taey_math "github.com/nitipatl/go-math"
 )
 
 func main() {
@@ -10,4 +13,5 @@ func main() {
 	hand.Print()
 	remainingCards.Print()
 	cards.Print()
+	fmt.Println(taey_math.Add(1, 2))
 }
