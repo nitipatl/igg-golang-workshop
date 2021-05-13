@@ -19,4 +19,5 @@ func main() {
 	if err := cards.SaveToFile("deck.txt"); err != nil {
 		fmt.Println("Error: ", err)
 	}
+	fmt.Println(cards.NewDeckFromFile("deck.txt"))
 }
