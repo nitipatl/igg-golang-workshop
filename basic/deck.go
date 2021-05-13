@@ -48,3 +48,8 @@ func newDeckFromFile(filename string) deck {
 	// 3. []string -> deck
 	return deck(strings.Split(string(bs), ","))
 }
+
+func (d deck) shuffle() deck {
+	// ..
+	return deck{}
+}
