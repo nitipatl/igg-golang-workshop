@@ -2,34 +2,16 @@ package main
 
 import "fmt"
 
-type person struct {
-	firstName string
-	lastName  string
-	contact   contactInfo
-}
-
-type contactInfo struct {
-	email string
-	zip   int
-}
-
 func main() {
-	// taey := person{
-	// 	"Nitipat",
-	// 	"L",
-	// }
-	// var taey person
-	// taey.firstName = "Nitipat"
-	// taey.lastName = "L"
+	name := "bill"
 
-	taey := person{
-		firstName: "Nitipat",
-		lastName:  "L",
-		contact: contactInfo{
-			email: "iamsvz@gmail.com",
-			zip:   50200,
-		},
-	}
+	namePointer := &name
 
-	fmt.Printf("%+v", taey)
+	fmt.Println(*&namePointer)
+	// printPointer(namePointer)
+	fmt.Println(&name)
+}
+
+func printPointer(namePointer *string) {
+	fmt.Println(&namePointer)
 }
