@@ -7,11 +7,13 @@ func main() {
 
 	namePointer := &name
 
-	fmt.Println(*&namePointer)
-	// printPointer(namePointer)
-	fmt.Println(&name)
+	fmt.Println(&namePointer)
+	printPointer(namePointer)
+
+	fmt.Println(name)
 }
 
 func printPointer(namePointer *string) {
 	fmt.Println(&namePointer)
+	*namePointer = "yess"
 }
